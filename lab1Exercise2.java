@@ -32,7 +32,7 @@ public class lab1Exercise2 {
         //4. find number 2 if in the list else display not found
         System.out.println("Find if number 2 in the list:");
         num = scan.nextInt();
-        if (numberList1.contains(num)) {
+        if (numberList1.indexOf(num) != -1) {
             System.out.println("Number 2 is in the list.");
         } else {
             System.out.println("Number 2 is not found in the list.");
