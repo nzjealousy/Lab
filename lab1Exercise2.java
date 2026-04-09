@@ -51,10 +51,10 @@ public class lab1Exercise2 {
                 numberList2.add(number);
             }
         }
-        for (int i = numberList1.size() - 1; i >= 0; i--) {
-            int number = numberList1.get(i);
+        for (int i = numberList1.size() - 1; i >= 0; i--) { // size() = 5, i = 5 -1, loop if >=0 then minus 1 
+            int number = numberList1.get(i); //get number based on index i
             if (number % 2 == 0) {
-                numberList1.remove(i);
+                numberList1.remove(i); //remove number based on index i
             }
         }
         //7. display all list
