@@ -40,6 +40,8 @@ public class lab1Exercise2 {
         //5. count and display sum of all numbers in the list
         int sum = 0;
         for (int number : numberList1) {
+            //(int i = 0; i < numberList1.size(); i++) 
+            //int number = numberList1.get(i);
             sum += number;
         }
         System.out.println("Sum of all numbers in the list: " + sum);
