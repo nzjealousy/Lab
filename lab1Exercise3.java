@@ -49,7 +49,7 @@ public class lab1Exercise3 {
         System.out.print("Enter book title to replace:");
         String titleToReplace = scan.nextLine();
         for (Book book : bookList) {
-            if (book.getTitle().equals(titleToReplace)) {
+            if (book.getTitle().equalsIgnoreCase(titleToReplace)) {
                 System.out.print("Enter new title:");
                 String newTitle = scan.nextLine();
                 System.out.print("Enter new price:");
