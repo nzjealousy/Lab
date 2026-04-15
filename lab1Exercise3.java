@@ -53,10 +53,9 @@ public class lab1Exercise3 {
                 System.out.print("Enter new title:");
                 String newTitle = scan.nextLine();
                 System.out.print("Enter new price:");
-                double newPrice = scan.nextDouble();
+                double newPrice = Double.parseDouble(scan.nextLine());
                 System.out.print("Enter new year:");
-                int newYear = scan.nextInt();
-                scan.nextLine(); // consume the newline
+                int newYear = Integer.parseInt(scan.nextLine());
                 System.out.print("Enter new type (t/w/o):");
                 char newType = scan.nextLine().charAt(0);
                 book.setTitle(newTitle);
