@@ -48,7 +48,7 @@ public class lab1Exercise3 {
         System.out.println("Replace new book info:");
         System.out.print("Enter book title to replace:");
         String titleToReplace = scan.nextLine();
-        for (Book book : bookList) {
+        for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++) and bookList.get(i)
             if (book.getTitle().equalsIgnoreCase(titleToReplace)) {
                 System.out.print("Enter new title:");
                 String newTitle = scan.nextLine();
