@@ -14,7 +14,7 @@ public class lab1Exercise3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         //1. create an array list of type Book
-        ArrayList<Book> bookList = new ArrayList<>();
+        ArrayList<Book> bookList = new ArrayList<Book>();
         //2. create 5 book objects and store in the list
         System.out.println("Enter 5 books (title, author, year,type):");
         for (int i = 0; i < 5; i++) {
@@ -22,10 +22,10 @@ public class lab1Exercise3 {
             System.out.print("Title:");
             String title = scan.nextLine();
             System.out.print("Price:");
-            double price = scan.nextDouble();
+            double price = Double.parseDouble(scan.nextLine());
             System.out.print("Year:");
-            int year = scan.nextInt();
-            scan.nextLine(); // consume the newline
+            int year = Integer.parseInt(scan.nextLine());
+
             System.out.print("Type (t/w/o):");
             char type = scan.nextLine().charAt(0);
             Book book = new Book(title, year, price, type);

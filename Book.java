@@ -56,6 +56,6 @@ public class Book {
 
     //toString method
     public String toString() {
-        return "\nTitle :\t" + title + "\nYear :\t" + year + "\nPrice :\t" + price + "\nType :\t" + type;
+        return "\nTitle :\t" + "\tYear :\t" + "\tPrice :\t" + "\tType :\n" + title + "\t\t" + year + "\t\t" + price + "\t\t" + type;
     }
 }
