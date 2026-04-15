@@ -72,7 +72,7 @@ public class lab1Exercise3 {
         System.out.println("Expensive book:");
         Book expensiveBook = null;
         for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++)
-            if (expensiveBook == null || book.getPrice() > expensiveBook.getPrice()) {
+            if (expensiveBook == null || book.getPrice() > expensiveBook.getPrice()) { //if expensiveBook is null or book price is greater than expensiveBook price, update expensiveBook
                 expensiveBook = book;
             }
         }
