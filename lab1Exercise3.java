@@ -80,12 +80,15 @@ public class lab1Exercise3 {
         //7. count total price of all books in the list
         double totalT = 0.0, totalW = 0.0, totalO = 0.0;
         for (Book book : bookList) {
-            if (book.getType() == 't') {
-                totalT += book.getPrice();
-            } else if (book.getType() == 'w') {
-                totalW += book.getPrice();
-            } else if (book.getType() == 'o') {
-                totalO += book.getPrice();
+            switch (book.getType()) {
+                case 't' ->
+                    totalT += book.getPrice();
+                case 'w' ->
+                    totalW += book.getPrice();
+                case 'o' ->
+                    totalO += book.getPrice();
+                default -> {
+                }
             }
         }
         System.out.println("Total price of all books:");
