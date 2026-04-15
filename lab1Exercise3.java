@@ -33,12 +33,12 @@ public class lab1Exercise3 {
         }
         //3. display all book objects in the list
         System.out.println("Book List:");
-        for (Book book : bookList) {
+        for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++) and bookList.get(i)
             System.out.println(book);
         }
         //4.  update book year 2025 with discount
         System.out.println("Update book year 2025 with discount:");
-        for (Book book : bookList) {
+        for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++) and bookList.get(i) 
             if (book.getYear() == 2025) {
                 book.setPrice(book.getPrice() - 5.0);
             }
@@ -65,13 +65,13 @@ public class lab1Exercise3 {
             }
         }
         System.out.println("Book List:");
-        for (Book book : bookList) {
+        for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++) and bookList.get(i)
             System.out.println(book);
         }
         //6. find expensive book and display
         System.out.println("Expensive book:");
         Book expensiveBook = null;
-        for (Book book : bookList) {
+        for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++)
             if (expensiveBook == null || book.getPrice() > expensiveBook.getPrice()) {
                 expensiveBook = book;
             }
@@ -97,7 +97,7 @@ public class lab1Exercise3 {
         System.out.println("Type O: " + totalO);
         //8. display all
         System.out.println("Book List:");
-        for (Book book : bookList) {
+        for (Book book : bookList) { // or use (int i = 0; i < bookList.size(); i++) and bookList.get(i)
             System.out.println(book);
         }
     }
