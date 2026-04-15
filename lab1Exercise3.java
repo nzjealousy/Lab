@@ -80,9 +80,9 @@ public class lab1Exercise3 {
         //7. count total price of all books in the list
         double totalT = 0.0, totalW = 0.0, totalO = 0.0;
         for (Book book : bookList) {
-            switch (book.getType()) {
-                case 't' ->
-                    totalT += book.getPrice();
+            switch (book.getType()) { //get type
+                case 't' -> //if type is t, add price to totalT
+                    totalT += book.getPrice();//add price to totalT
                 case 'w' ->
                     totalW += book.getPrice();
                 case 'o' ->
