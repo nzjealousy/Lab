@@ -10,8 +10,8 @@ public class BubbleSorting {
 
     public static void main(String[] args) {
         ArrayList<Integer> listA = new ArrayList<>();
-        // Generate 50 random integers between 0 and 1000
-        for (int i = 0; i < 50; i++) {
+        // Generate 10 random integers between 0 and 1000
+        for (int i = 0; i < 10; i++) {
             int number = (int) (Math.random() * 1001); // 0–100 inclusive
             listA.add(number);
         }
