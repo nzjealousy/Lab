@@ -28,7 +28,7 @@ public class BubbleSorting {
             }
         }
         System.out.println("After Sorting: " + listA);
-
+        // Bubble Sort descending order
         for (int i = 0; i < listA.size() - 1; i++) {
             for (int n = 0; n < listA.size() - i - 1; n++) {    // Compare adjacent elements
                 if (listA.get(n) < listA.get(n + 1)) {  // Swap if the current element is greater than the next element
