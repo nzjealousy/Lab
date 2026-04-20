@@ -12,7 +12,7 @@ public class TestInsertion {
         listA.add(96);
         listA.add(4);
         System.out.println("Before Sorting: " + listA);
-        // Insertion Sort
+        // Insertion Sort ascending order
         for (int i = 1; i < listA.size(); i++) {
             int value = listA.get(i);
             int n = i - 1;
@@ -23,5 +23,17 @@ public class TestInsertion {
             listA.set(n + 1, value);
         }
         System.out.println("After Sorting: " + listA);
+        // Insertion Sort descending order
+        for (int i = 1; i < listA.size(); i++) {
+            int value = listA.get(i);
+            int n = i - 1;
+            while (n >= 0 && listA.get(n) < value) {
+                listA.set(n + 1, listA.get(n));
+                n--;
+            }
+            listA.set(n + 1, value);
+        }
+        System.out.println("After Sorting (Descending): " + listA);
+
     }
 }
