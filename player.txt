@@ -1,10 +1,5 @@
-Jen,6
-Matt,4
-Tofu,7
-Ipan,8
-Zen,11
-Pijul,2
-Rish,5
-Jim,8
-Bruno,8
-Mars,6
+Alice,58
+Bob,78
+Candy,60
+Daisy,76
+Fish,66

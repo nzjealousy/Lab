@@ -9,20 +9,20 @@ public class LabExercise3 {
 
     public static void main(String[] args) {
         // Create an ArrayList to store Player objects
-        ArrayList<Player> listPlayer = new ArrayList<Player>();
+        ArrayList<Player> listPlayer = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         // file path
-        String filePath
-                = "C:/Users/Zenith/Documents/UiTM Semester/Semester 3/CSC248/Lab/player.txt";
+        String filePath = "C:/Users/Zenith/Documents/UiTM Semester/Semester 3/CSC248/Lab/player.txt";
         // Read player data from the file and populate the listPlayer ArrayList
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
+            // Read each line from the file, split it into nickname and score, create a Player object, and add it to the list
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(","); // Assuming nickname and score are separated by a comma
                 if (parts.length == 2) {// Check if the line has both nickname and score
-                    String nickname = parts[0].trim();
-                    int score = Integer.parseInt(parts[1].trim());
-                    Player playerObj = new Player(nickname, score);
+                    String nickname = parts[0].trim();// Get the nickname and trim any whitespace
+                    int score = Integer.parseInt(parts[1].trim());// Get the score, trim whitespace, and convert to an integer
+                    Player playerObj = new Player(nickname, score);// Create a new Player object with the nickname and score
                     listPlayer.add(playerObj); // Add the player object to the list
                 }
             }
@@ -47,7 +47,7 @@ public class LabExercise3 {
         }
         // Calculate average score
         double averageScore = (double) totalScore / listPlayer.size();
-
+        // Display total score, average score, and highest score player
         System.out.println("\nTotal Score: " + totalScore);
         System.out.println("\nAverage Score: " + averageScore);
         System.out.println("\nHighest Score Player: " + highestScorePlayer + " with a score of " + highestScore);
@@ -89,7 +89,7 @@ public class LabExercise3 {
         if (foundIndex == -1) {
             System.out.println("The search nickname is not in the list.");
         } else {
-            System.out.println("Player at index: " + listPlayer.get(foundIndex) + " with score: " + listPlayer.get(foundIndex).getScore());
+            System.out.println("Player at index: " + foundIndex + " with score: " + listPlayer.get(foundIndex).getScore());
         }
         scan.close();
     }
