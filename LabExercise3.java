@@ -37,7 +37,9 @@ public class LabExercise3 {
         //count total score and average score and highest score
         int totalScore = 0;
         int highestScore = 0;
+        //variable to store the name of the player with the highest score
         String highestScorePlayer = "";
+        // Loop through the list of players to calculate total score and find the highest score
         for (Player player : listPlayer) {
             totalScore += player.getScore();
             if (player.getScore() > highestScore) {
