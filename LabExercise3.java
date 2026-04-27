@@ -18,7 +18,7 @@ public class LabExercise3 {
             String line;
             // Read each line from the file, split it into nickname and score, create a Player object, and add it to the list
             while ((line = br.readLine()) != null) {
-                String[] parts = line.split(","); // Assuming nickname and score are separated by a comma
+                String[] parts = line.split(","); // Assuming nickname and score are separated by a ,
                 if (parts.length == 2) {// Check if the line has both nickname and score
                     String nickname = parts[0].trim();// Get the nickname and trim any whitespace
                     int score = Integer.parseInt(parts[1].trim());// Get the score, trim whitespace, and convert to an integer
@@ -40,13 +40,22 @@ public class LabExercise3 {
         //variable to store the name of the player with the highest score
         String highestScorePlayer = "";
         // Loop through the list of players to calculate total score and find the highest score
-        for (Player player : listPlayer) {
-            totalScore += player.getScore();
-            if (player.getScore() > highestScore) {
-                highestScore = player.getScore();
-                highestScorePlayer = player.getName();
+        for (Player player : listPlayer) {// For each player in the list
+            totalScore += player.getScore();// Add the player's score to the total score
+            if (player.getScore() > highestScore) {// condition to check if the player's score is greater than the current highest score
+                highestScore = player.getScore(); // Update the highest score
+                highestScorePlayer = player.getName(); // Update the name of the player with the highest score
             }
         }
+        /*
+        for (int i = 0; i < listPlayer.size(); i++) {
+            totalScore += listPlayer.get(i).getScore();
+            if (listPlayer.get(i).getScore() > highestScore) {
+                highestScore = listPlayer.get(i).getScore();
+                highestScorePlayer = listPlayer.get(i).getName();
+            }
+        }
+         */
         // Calculate average score
         double averageScore = (double) totalScore / listPlayer.size();
         // Display total score, average score, and highest score player
