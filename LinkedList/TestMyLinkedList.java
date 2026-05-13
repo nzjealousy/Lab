@@ -11,12 +11,16 @@ public class TestMyLinkedList {
         //insert some nodes at the front of the list
         myList2.insertAtFront("Bobby");
         //insert some nodes at the back of the list
-        myList2.insertAtBack("Cathy");
-
+        myList2.insertAtBack("Cindy");
+        myList2.insertAtBack("David");
         //display the list
         System.out.println("Node in myList2: ");
         myList2.display();
 
+        myList2.removeFromFront();
+        myList2.display();
+        myList2.removeFromBack();
+        myList2.display();
     }
 
 }

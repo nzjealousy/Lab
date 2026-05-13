@@ -51,6 +51,47 @@ public class MyLinkedList<E> {
         }
     }
 
+    //remove a node at the front of the list
+    public E removeFromFront() {
+        E removeItem = null;
+        if (isEmpty()) {
+            return null; //nothing to remove
+        }
+        removeItem = first.data; //store the data of the node to be removed
+        if (first == last) { //only one node in the list
+            first = null;
+            last = null;
+            current = null;
+        } else {
+            first = first.next; //move the first pointer to the next node
+        }
+        System.out.println("Removed item: " + removeItem);
+        return removeItem;
+    }
+
+    //remove a node at the back of the list
+    public E removeFromBack() {
+        E removeItem = null;
+        if (isEmpty()) {
+            return null; //nothing to remove
+        }
+        removeItem = last.data; //store the data of the node to be removed
+        if (first == last) { //only one node in the list
+            first = null;
+            last = null;
+            current = null;
+        } else {
+            current = first;
+            while (current.next != last) { //traverse the list to find the second last node
+                current = current.next;
+            }
+            current.next = null; //remove the last node
+            last = current; //update the last pointer
+        }
+        System.out.println("Removed item: " + removeItem);
+        return removeItem;
+    }
+
     //print the list
     public void display() {
         Node<E> temp = first;
